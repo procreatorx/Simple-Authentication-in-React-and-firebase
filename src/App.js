@@ -18,7 +18,7 @@ class App extends Component {
         const firebase = require('firebase');
       
      const config = {
-            your Apikey
+            your Apikey // will get from firebase website have to paste it here.
           };
           if (!firebase.apps.length) {
             firebase.initializeApp(config);
