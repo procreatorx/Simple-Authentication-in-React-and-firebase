@@ -3,6 +3,15 @@ import { Text } from 'react-native';
 
 import { Button, Card, CardSection, Input, Spinner } from './common';
 
+const styles = {
+    errorTextStyle: {
+        fontSize: 20,
+        alignSelf: 'center',
+        color: 'red'
+    }
+
+};
+
 class LoginForm extends Component {
     constructor(props) {
         super(props);
@@ -62,7 +71,6 @@ firebase.auth().signInWithEmailAndPassword(email, password)
             value={this.state.email}
             />
             </CardSection>
-
            <CardSection>
            <Input
            secureTextEntry
@@ -84,13 +92,5 @@ firebase.auth().signInWithEmailAndPassword(email, password)
     }
 }
 
-const styles = {
-    errorTextStyle: {
-        fontSize: 20,
-        alignSelf: 'center',
-        color: 'red'
-    }
-
-};
 
 export default LoginForm;
